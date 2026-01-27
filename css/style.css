@@ -161,22 +161,21 @@ strong {
   position: fixed;
   bottom: 1.5rem;
   right: 1.5rem;
+  z-index: 9999;
   width: 48px;
   height: 48px;
-  border: none;
+  border: 1px solid var(--border);
   border-radius: 8px;
   background: #fff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
   cursor: pointer;
   padding: 8px;
-  transition: transform 0.2s, box-shadow 0.2s;
-  opacity: 0.7;
+  transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
 }
 
 .nhs-egg:hover {
   transform: scale(1.1);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  opacity: 1;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
 }
 
 .nhs-egg svg {
@@ -186,7 +185,7 @@ strong {
 
 .nhs-theme .nhs-egg {
   background: #005eb8;
-  opacity: 1;
+  border-color: #005eb8;
 }
 
 .nhs-theme .nhs-egg svg path {

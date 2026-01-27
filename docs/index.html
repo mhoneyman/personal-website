@@ -149,6 +149,24 @@ strong {
 /* NHS Theme Overrides */
 .nhs-theme body {
   font-family: Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.5;
+  max-width: 960px;
+}
+
+.nhs-theme h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.nhs-theme h2 {
+  font-size: 1.5rem;
+  border-bottom: none;
+  margin-top: 2.5rem;
+}
+
+.nhs-theme h3 {
+  font-size: 1.25rem;
 }
 
 .nhs-theme a {
@@ -156,11 +174,21 @@ strong {
 }
 
 .nhs-theme a:hover {
+  color: #7C2855;
   text-decoration: none;
 }
 
-.nhs-theme h2 {
-  border-bottom: 4px solid var(--accent);
+.nhs-theme a:focus {
+  background-color: #ffeb3b;
+  color: #212b32;
+  box-shadow: 0 -2px #ffeb3b, 0 4px #212b32;
+  text-decoration: none;
+  outline: none;
+}
+
+.nhs-theme hr {
+  border-top: 1px solid #d8dde0;
+  margin: 2rem 0;
 }
 
 /* NHS Easter Egg Button */

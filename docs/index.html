@@ -23,6 +23,25 @@
   }
 }
 
+/* NHS Digital Design System Theme */
+:root.nhs-theme {
+  --bg: #f0f4f5;
+  --text: #212b32;
+  --muted: #4c6272;
+  --accent: #005eb8;
+  --border: #d8dde0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root.nhs-theme {
+    --bg: #f0f4f5;
+    --text: #212b32;
+    --muted: #4c6272;
+    --accent: #005eb8;
+    --border: #d8dde0;
+  }
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -127,6 +146,60 @@ strong {
   text-decoration: none;
 }
 
+/* NHS Theme Overrides */
+.nhs-theme body {
+  font-family: Arial, sans-serif;
+}
+
+.nhs-theme a {
+  text-decoration: underline;
+}
+
+.nhs-theme a:hover {
+  text-decoration: none;
+}
+
+.nhs-theme h2 {
+  border-bottom: 4px solid var(--accent);
+}
+
+/* NHS Easter Egg Button */
+.nhs-egg {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  cursor: pointer;
+  padding: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  opacity: 0.7;
+}
+
+.nhs-egg:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  opacity: 1;
+}
+
+.nhs-egg svg {
+  width: 100%;
+  height: 100%;
+}
+
+.nhs-theme .nhs-egg {
+  background: #005eb8;
+  opacity: 1;
+}
+
+.nhs-theme .nhs-egg svg path {
+  fill: #fff;
+}
+
 @media print {
   body {
     max-width: 100%;
@@ -140,6 +213,10 @@ strong {
   .social-links a {
     border: none;
     padding: 0;
+  }
+
+  .nhs-egg {
+    display: none;
   }
 }
 </style>
@@ -192,5 +269,29 @@ strong {
 <p>What you enjoy outside of work.</p>
 
   </main>
+  <button class="nhs-egg" aria-label="Toggle NHS theme" title="Toggle NHS theme">
+    <svg viewBox="0 0 40 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <path fill="#005eb8" d="M0 0h40v16H0z"/>
+  <path fill="#fff" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"/>
+</svg>
+  </button>
+  
+<script>
+(function() {
+  var btn = document.querySelector('.nhs-egg');
+  var root = document.documentElement;
+  var key = 'nhs-theme-active';
+
+  // Restore saved preference
+  if (localStorage.getItem(key) === 'true') {
+    root.classList.add('nhs-theme');
+  }
+
+  btn.addEventListener('click', function() {
+    root.classList.toggle('nhs-theme');
+    localStorage.setItem(key, root.classList.contains('nhs-theme'));
+  });
+})();
+</script>
 </body>
 </html>

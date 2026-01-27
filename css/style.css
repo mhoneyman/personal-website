@@ -16,6 +16,25 @@
   }
 }
 
+/* NHS Digital Design System Theme */
+:root.nhs-theme {
+  --bg: #f0f4f5;
+  --text: #212b32;
+  --muted: #4c6272;
+  --accent: #005eb8;
+  --border: #d8dde0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root.nhs-theme {
+    --bg: #f0f4f5;
+    --text: #212b32;
+    --muted: #4c6272;
+    --accent: #005eb8;
+    --border: #d8dde0;
+  }
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -120,6 +139,60 @@ strong {
   text-decoration: none;
 }
 
+/* NHS Theme Overrides */
+.nhs-theme body {
+  font-family: Arial, sans-serif;
+}
+
+.nhs-theme a {
+  text-decoration: underline;
+}
+
+.nhs-theme a:hover {
+  text-decoration: none;
+}
+
+.nhs-theme h2 {
+  border-bottom: 4px solid var(--accent);
+}
+
+/* NHS Easter Egg Button */
+.nhs-egg {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  cursor: pointer;
+  padding: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  opacity: 0.7;
+}
+
+.nhs-egg:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  opacity: 1;
+}
+
+.nhs-egg svg {
+  width: 100%;
+  height: 100%;
+}
+
+.nhs-theme .nhs-egg {
+  background: #005eb8;
+  opacity: 1;
+}
+
+.nhs-theme .nhs-egg svg path {
+  fill: #fff;
+}
+
 @media print {
   body {
     max-width: 100%;
@@ -133,5 +206,9 @@ strong {
   .social-links a {
     border: none;
     padding: 0;
+  }
+
+  .nhs-egg {
+    display: none;
   }
 }

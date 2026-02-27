@@ -342,69 +342,38 @@ strong {
 }
 
 /* NHS Card styling for CV sections */
-.nhs-theme .cv-content h2 {
-  background-color: #fff;
-  border-left: 4px solid #005eb8;
-  padding: 16px 24px 16px 24px;
-  margin: 32px 0 0;
-  box-shadow: 0 1px 4px rgba(33, 43, 50, 0.08);
-}
-
-.nhs-theme .cv-content h2 ~ *:not(h2):not(hr) {
-  background-color: #fff;
-  padding: 0 24px;
-  margin-left: 0;
-  margin-right: 0;
-  box-shadow: 0 1px 4px rgba(33, 43, 50, 0.08);
-}
-
-.nhs-theme .cv-content h2 + *:not(h2):not(hr) {
-  padding-top: 16px;
-}
-
-.nhs-theme .cv-content hr + h2,
-.nhs-theme .cv-content > h2:first-of-type {
-  margin-top: 32px;
-}
-
-.nhs-theme .cv-content ul,
-.nhs-theme .cv-content ol {
-  padding-left: 24px;
-  margin-left: 24px;
-}
-
-.nhs-theme .cv-content h2 ~ ul,
-.nhs-theme .cv-content h2 ~ ol {
-  padding-left: 48px;
-  margin-left: 0;
-}
-
-.nhs-theme .cv-content h2 ~ p:last-of-type,
-.nhs-theme .cv-content h2 ~ ul:last-of-type {
-  padding-bottom: 24px;
-}
-
-.nhs-theme .cv-content hr {
-  background: transparent;
-  box-shadow: none;
-  border: none;
-  margin: 0;
-  padding: 0;
-  height: 0;
-}
-
-.nhs-theme .cv-content h3 {
-  margin-top: 16px;
-  padding-top: 8px;
-}
-
 .nhs-theme .cv-content > h1:first-child {
   color: #005eb8;
-  margin-bottom: 8px;
+  margin-bottom: 24px;
 }
 
-.nhs-theme .cv-content > h1:first-child + h2 {
-  margin-top: 32px;
+.nhs-theme .nhsuk-card {
+  background-color: #fff;
+  border-left: 4px solid #005eb8;
+  padding: 24px;
+  margin: 24px 0 0;
+  box-shadow: 0 1px 4px rgba(33, 43, 50, 0.08);
+}
+
+.nhs-theme .nhsuk-card h2 {
+  margin: 0 0 16px 0;
+  padding: 0;
+}
+
+.nhs-theme .nhsuk-card h3 {
+  margin-top: 20px;
+}
+
+.nhs-theme .nhsuk-card ul,
+.nhs-theme .nhsuk-card ol {
+  margin-left: 0;
+  padding-left: 20px;
+}
+
+.nhs-theme .nhsuk-card ul:last-child,
+.nhs-theme .nhsuk-card ol:last-child,
+.nhs-theme .nhsuk-card p:last-child {
+  margin-bottom: 0;
 }
 
 /* NHS Easter Egg Button */
@@ -488,17 +457,15 @@ strong {
         <div class="nhsuk-grid-column-two-thirds">
           <div class="cv-content">
             <h1>Matthew Honeyman</h1>
-<h2>Contact</h2>
+<div class="nhsuk-card"><h2>Contact</h2>
 <ul>
 <li>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
 <li>LinkedIn: <a href="https://linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a></li>
 <li>GitHub: <a href="https://github.com/yourusername">github.com/yourusername</a></li>
-</ul>
-<hr>
-<h2>Summary</h2>
-<p>A brief professional summary goes here. Describe your expertise, interests, and what you&#39;re looking for.</p>
-<hr>
-<h2>Experience</h2>
+</ul></div>
+<div class="nhsuk-card"><h2>Summary</h2>
+<p>A brief professional summary goes here. Describe your expertise, interests, and what you&#39;re looking for.</p></div>
+<div class="nhsuk-card"><h2>Experience</h2>
 <h3>Job Title — Company Name</h3>
 <p><em>January 2022 – Present</em></p>
 <ul>
@@ -511,27 +478,22 @@ strong {
 <ul>
 <li>Description of work</li>
 <li>Key projects or outcomes</li>
-</ul>
-<hr>
-<h2>Education</h2>
+</ul></div>
+<div class="nhsuk-card"><h2>Education</h2>
 <h3>Degree Name — University Name</h3>
 <p><em>Graduation Year</em></p>
-<p>Relevant coursework, honors, or activities.</p>
-<hr>
-<h2>Skills</h2>
+<p>Relevant coursework, honors, or activities.</p></div>
+<div class="nhsuk-card"><h2>Skills</h2>
 <ul>
 <li><strong>Technical:</strong> List relevant technical skills</li>
 <li><strong>Languages:</strong> English (native), others</li>
 <li><strong>Tools:</strong> Software, frameworks, etc.</li>
-</ul>
-<hr>
-<h2>Projects</h2>
+</ul></div>
+<div class="nhsuk-card"><h2>Projects</h2>
 <h3>Project Name</h3>
-<p>Brief description and link if available.</p>
-<hr>
-<h2>Interests</h2>
-<p>What you enjoy outside of work.</p>
-
+<p>Brief description and link if available.</p></div>
+<div class="nhsuk-card"><h2>Interests</h2>
+<p>What you enjoy outside of work.</p></div>
           </div>
         </div>
       </div>

@@ -33,40 +33,7 @@ if (!fs.existsSync(DIST)) {
 // Read and convert CV markdown
 const cvPath = path.join(SRC, 'cv.md');
 const cvMarkdown = fs.readFileSync(cvPath, 'utf-8');
-let cvHtml = marked.parse(cvMarkdown);
-
-// Wrap sections in card divs for NHS theme
-// Split by <hr> and wrap each section (starting with h2) in a card
-function wrapSectionsInCards(html) {
-  // Split by hr tags
-  const parts = html.split(/<hr\s*\/?>/gi);
-
-  return parts.map((part, index) => {
-    const trimmed = part.trim();
-    if (!trimmed) return '';
-
-    // First part contains h1 and possibly the first section (Contact)
-    if (index === 0) {
-      // Check if there's an h2 in this part - if so, separate h1 and wrap the h2 section
-      const h2Match = trimmed.match(/(<h1>[\s\S]*?<\/h1>)([\s\S]*)/i);
-      if (h2Match && h2Match[2].trim().startsWith('<h2>')) {
-        const h1Part = h2Match[1];
-        const h2Part = h2Match[2].trim();
-        return `${h1Part}\n<div class="nhsuk-card">${h2Part}</div>`;
-      }
-      return trimmed;
-    }
-
-    // Wrap sections that start with h2 in a card div
-    if (trimmed.startsWith('<h2>')) {
-      return `<div class="nhsuk-card">${trimmed}</div>`;
-    }
-
-    return trimmed;
-  }).join('\n');
-}
-
-cvHtml = wrapSectionsInCards(cvHtml);
+const cvHtml = marked.parse(cvMarkdown);
 
 // Read CSS
 const cssPath = path.join(CSS, 'style.css');

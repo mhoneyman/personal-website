@@ -338,21 +338,57 @@ strong {
 .nhs-theme .cv-content h2 {
   background-color: #fff;
   border-left: 4px solid #005eb8;
-  padding: 16px 24px;
+  padding: 16px 24px 16px 24px;
   margin: 32px 0 0;
   box-shadow: 0 1px 4px rgba(33, 43, 50, 0.08);
 }
 
-.nhs-theme .cv-content h2 + * {
+.nhs-theme .cv-content h2 ~ *:not(h2):not(hr) {
   background-color: #fff;
-  padding: 24px;
-  padding-top: 0;
-  margin-top: 0;
+  padding: 0 24px;
+  margin-left: 0;
+  margin-right: 0;
   box-shadow: 0 1px 4px rgba(33, 43, 50, 0.08);
 }
 
+.nhs-theme .cv-content h2 + *:not(h2):not(hr) {
+  padding-top: 16px;
+}
+
+.nhs-theme .cv-content hr + h2,
+.nhs-theme .cv-content > h2:first-of-type {
+  margin-top: 32px;
+}
+
+.nhs-theme .cv-content ul,
+.nhs-theme .cv-content ol {
+  padding-left: 24px;
+  margin-left: 24px;
+}
+
+.nhs-theme .cv-content h2 ~ ul,
+.nhs-theme .cv-content h2 ~ ol {
+  padding-left: 48px;
+  margin-left: 0;
+}
+
+.nhs-theme .cv-content h2 ~ p:last-of-type,
+.nhs-theme .cv-content h2 ~ ul:last-of-type {
+  padding-bottom: 24px;
+}
+
+.nhs-theme .cv-content hr {
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  height: 0;
+}
+
 .nhs-theme .cv-content h3 {
-  margin-top: 24px;
+  margin-top: 16px;
+  padding-top: 8px;
 }
 
 .nhs-theme .cv-content > h1:first-child {

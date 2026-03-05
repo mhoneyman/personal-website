@@ -33,7 +33,19 @@ if (!fs.existsSync(DIST)) {
 // Read and convert CV markdown
 const cvPath = path.join(SRC, 'cv.md');
 const cvMarkdown = fs.readFileSync(cvPath, 'utf-8');
-const cvHtml = marked.parse(cvMarkdown);
+let cvHtml = marked.parse(cvMarkdown);
+
+// Wrap sections (h2 + content until next hr) in section elements for card styling
+// Split on <hr> boundaries, wrap each chunk that starts with <h2> in a <section>
+cvHtml = cvHtml.replace(/<hr>\n?/g, '<!--HR-->');
+const chunks = cvHtml.split('<!--HR-->');
+cvHtml = chunks.map(chunk => {
+  const trimmed = chunk.trim();
+  if (trimmed.startsWith('<h2>')) {
+    return `<section class="cv-section">\n${trimmed}\n</section>`;
+  }
+  return trimmed;
+}).join('\n');
 
 // Read CSS
 const cssPath = path.join(CSS, 'style.css');

@@ -35,16 +35,19 @@ const cvPath = path.join(SRC, 'cv.md');
 const cvMarkdown = fs.readFileSync(cvPath, 'utf-8');
 let cvHtml = marked.parse(cvMarkdown);
 
-// Wrap sections (h2 + content until next hr) in section elements for card styling
-// Split on <hr> boundaries, wrap each chunk that starts with <h2> in a <section>
-cvHtml = cvHtml.replace(/<hr>\n?/g, '<!--HR-->');
-const chunks = cvHtml.split('<!--HR-->');
-cvHtml = chunks.map(chunk => {
-  const trimmed = chunk.trim();
-  if (trimmed.startsWith('<h2>')) {
-    return `<section class="cv-section">\n${trimmed}\n</section>`;
+// Wrap sections (h2 + content until next h2) in section elements for card styling
+// Remove hr tags and wrap each h2 section
+cvHtml = cvHtml.replace(/<hr>\n?/g, '');
+
+// Split by <h2> (using lookahead to keep the delimiter)
+const parts = cvHtml.split(/(?=<h2>)/);
+
+// Wrap each part that starts with <h2> in a section
+cvHtml = parts.map(part => {
+  if (part.trim().startsWith('<h2>')) {
+    return `<section class="cv-section">\n${part.trim()}\n</section>`;
   }
-  return trimmed;
+  return part;
 }).join('\n');
 
 // Read CSS

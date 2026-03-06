@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Matthew Honeyman</title>
+  <title>CV - Matthew Honeyman</title>
   <meta name="description" content="Personal website and CV of Matthew Honeyman">
   <style>:root {
   --bg: #ffffff;
@@ -370,11 +370,106 @@ strong {
 </style>
 </head>
 <body>
-  <main>
-    <h1>Matthew Honeyman</h1>
-<p>Welcome to my personal website.</p>
-<p><a href="/about.html">About me</a> | <a href="/cv.html">CV</a> | <a href="/writing.html">Writing</a></p>
+  
+<header class="nhsuk-header" role="banner">
+  <div class="nhsuk-header__container">
+    <div class="nhsuk-header__logo">
+      <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 16" aria-hidden="true" focusable="false">
+        <path fill="#fff" d="M0 0h40v16H0z"/>
+        <path fill="#005eb8" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"/>
+      </svg>
+    </div>
+    <div class="nhsuk-header__service">
+      <span class="nhsuk-header__service-name">Matthew Honeyman</span>
+    </div>
+  </div>
+</header>
+  <div class="nhsuk-width-container">
+    <main class="nhsuk-main-wrapper" id="main-content" role="main">
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+          <div class="cv-content">
+            <h1>Matthew Honeyman</h1>
 
-  </main>
+<section class="cv-section">
+<h2>Contact</h2>
+<ul>
+<li>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
+<li>LinkedIn: <a href="https://linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a></li>
+<li>GitHub: <a href="https://github.com/yourusername">github.com/yourusername</a></li>
+</ul>
+</section>
+<section class="cv-section">
+<h2>Summary</h2>
+<p>A brief professional summary goes here. Describe your expertise, interests, and what you&#39;re looking for.</p>
+</section>
+<section class="cv-section">
+<h2>Experience</h2>
+<h3>Job Title — Company Name</h3>
+<p><em>January 2022 – Present</em></p>
+<ul>
+<li>Achievement or responsibility</li>
+<li>Another key accomplishment</li>
+<li>Quantifiable result when possible</li>
+</ul>
+<h3>Previous Role — Previous Company</h3>
+<p><em>June 2019 – December 2021</em></p>
+<ul>
+<li>Description of work</li>
+<li>Key projects or outcomes</li>
+</ul>
+</section>
+<section class="cv-section">
+<h2>Education</h2>
+<h3>Degree Name — University Name</h3>
+<p><em>Graduation Year</em></p>
+<p>Relevant coursework, honors, or activities.</p>
+</section>
+<section class="cv-section">
+<h2>Skills</h2>
+<ul>
+<li><strong>Technical:</strong> List relevant technical skills</li>
+<li><strong>Languages:</strong> English (native), others</li>
+<li><strong>Tools:</strong> Software, frameworks, etc.</li>
+</ul>
+</section>
+<section class="cv-section">
+<h2>Projects</h2>
+<h3>Project Name</h3>
+<p>Brief description and link if available.</p>
+</section>
+<section class="cv-section">
+<h2>Interests</h2>
+<p>What you enjoy outside of work.</p>
+</section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <button class="nhs-egg" aria-label="Toggle NHS theme" title="Toggle NHS theme">
+    <svg viewBox="0 0 40 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <path fill="#005eb8" d="M0 0h40v16H0z"/>
+  <path fill="#fff" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"/>
+</svg>
+  </button>
+  
+<script>
+(function() {
+  var btn = document.querySelector('.nhs-egg');
+  var root = document.documentElement;
+  var key = 'nhs-theme-active';
+
+  // Restore saved preference
+  if (localStorage.getItem(key) === 'true') {
+    root.classList.add('nhs-theme');
+  }
+
+  btn.addEventListener('click', function() {
+    root.classList.toggle('nhs-theme');
+    localStorage.setItem(key, root.classList.contains('nhs-theme'));
+  });
+})();
+</script>
 </body>
 </html>

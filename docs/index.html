@@ -342,33 +342,38 @@ strong {
 }
 
 /* NHS Card styling for CV sections */
-.nhs-theme .cv-content h2 {
-  background-color: #fff;
-  border-left: 4px solid #005eb8;
-  padding: 16px 24px;
-  margin: 32px 0 0;
-  box-shadow: 0 1px 4px rgba(33, 43, 50, 0.08);
-}
-
-.nhs-theme .cv-content h2 + * {
-  background-color: #fff;
-  padding: 24px;
-  padding-top: 0;
-  margin-top: 0;
-  box-shadow: 0 1px 4px rgba(33, 43, 50, 0.08);
-}
-
-.nhs-theme .cv-content h3 {
-  margin-top: 24px;
-}
-
 .nhs-theme .cv-content > h1:first-child {
   color: #005eb8;
   margin-bottom: 8px;
 }
 
-.nhs-theme .cv-content > h1:first-child + h2 {
+.nhs-theme .cv-section {
+  background-color: #fff;
+  border-left: 4px solid #005eb8;
+  padding: 24px;
   margin-top: 32px;
+  box-shadow: 0 1px 4px rgba(33, 43, 50, 0.08);
+}
+
+.nhs-theme .cv-section h2 {
+  margin-top: 0;
+  padding-bottom: 0;
+}
+
+.nhs-theme .cv-section h3 {
+  margin-top: 24px;
+  background: none;
+  border: none;
+  padding: 0;
+  box-shadow: none;
+}
+
+.nhs-theme .cv-section h3:first-of-type {
+  margin-top: 16px;
+}
+
+.nhs-theme .cv-section > *:last-child {
+  margin-bottom: 0;
 }
 
 /* NHS Easter Egg Button */
@@ -452,16 +457,20 @@ strong {
         <div class="nhsuk-grid-column-two-thirds">
           <div class="cv-content">
             <h1>Matthew Honeyman</h1>
+
+<section class="cv-section">
 <h2>Contact</h2>
 <ul>
 <li>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
 <li>LinkedIn: <a href="https://linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a></li>
 <li>GitHub: <a href="https://github.com/yourusername">github.com/yourusername</a></li>
 </ul>
-<hr>
+</section>
+<section class="cv-section">
 <h2>Summary</h2>
 <p>A brief professional summary goes here. Describe your expertise, interests, and what you&#39;re looking for.</p>
-<hr>
+</section>
+<section class="cv-section">
 <h2>Experience</h2>
 <h3>Job Title — Company Name</h3>
 <p><em>January 2022 – Present</em></p>
@@ -476,26 +485,30 @@ strong {
 <li>Description of work</li>
 <li>Key projects or outcomes</li>
 </ul>
-<hr>
+</section>
+<section class="cv-section">
 <h2>Education</h2>
 <h3>Degree Name — University Name</h3>
 <p><em>Graduation Year</em></p>
 <p>Relevant coursework, honors, or activities.</p>
-<hr>
+</section>
+<section class="cv-section">
 <h2>Skills</h2>
 <ul>
 <li><strong>Technical:</strong> List relevant technical skills</li>
 <li><strong>Languages:</strong> English (native), others</li>
 <li><strong>Tools:</strong> Software, frameworks, etc.</li>
 </ul>
-<hr>
+</section>
+<section class="cv-section">
 <h2>Projects</h2>
 <h3>Project Name</h3>
 <p>Brief description and link if available.</p>
-<hr>
+</section>
+<section class="cv-section">
 <h2>Interests</h2>
 <p>What you enjoy outside of work.</p>
-
+</section>
           </div>
         </div>
       </div>

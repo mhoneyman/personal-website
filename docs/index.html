@@ -192,8 +192,7 @@ strong {
 }
 
 /* NHS Components - Hidden by default */
-.nhsuk-header,
-.nhsuk-footer {
+.nhsuk-header {
   display: none;
 }
 
@@ -274,71 +273,6 @@ strong {
 .nhs-theme body {
   max-width: none;
   padding: 0;
-}
-
-/* NHS Footer */
-.nhs-theme .nhsuk-footer {
-  display: block;
-  background-color: #231f20;
-  padding: 40px 0 16px;
-  color: #fff;
-}
-
-.nhs-theme .nhsuk-footer__container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 16px;
-}
-
-.nhs-theme .nhsuk-footer__meta {
-  border-top: 1px solid #4c6272;
-  padding-top: 24px;
-}
-
-.nhs-theme .nhsuk-u-visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-}
-
-.nhs-theme .nhsuk-footer__list {
-  list-style: none;
-  margin: 0 0 32px;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px 32px;
-}
-
-.nhs-theme .nhsuk-footer__list-item {
-  margin: 0;
-}
-
-.nhs-theme .nhsuk-footer__list-item-link {
-  color: #fff;
-  text-decoration: underline;
-  font-size: 16px;
-}
-
-.nhs-theme .nhsuk-footer__list-item-link:hover {
-  color: #99c4e6;
-}
-
-.nhs-theme .nhsuk-footer__list-item-link:focus {
-  color: #212b32;
-  background-color: #ffeb3b;
-  box-shadow: 0 -2px #ffeb3b, 0 4px #212b32;
-}
-
-.nhs-theme .nhsuk-footer__copyright {
-  color: #768692;
-  font-size: 14px;
-  margin: 0;
 }
 
 /* NHS Card styling for CV sections */
@@ -429,8 +363,7 @@ strong {
   }
 
   .nhs-egg,
-  .nhsuk-header,
-  .nhsuk-footer {
+  .nhsuk-header {
     display: none !important;
   }
 }
@@ -514,21 +447,6 @@ strong {
       </div>
     </main>
   </div>
-  
-<footer class="nhsuk-footer" role="contentinfo">
-  <div class="nhsuk-footer__container">
-    <div class="nhsuk-footer__meta">
-      <h2 class="nhsuk-u-visually-hidden">Support links</h2>
-      <ul class="nhsuk-footer__list">
-        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="#">Accessibility statement</a></li>
-        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="#">Contact</a></li>
-        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="#">Privacy policy</a></li>
-        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="#">Terms and conditions</a></li>
-      </ul>
-      <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
-    </div>
-  </div>
-</footer>
   <button class="nhs-egg" aria-label="Toggle NHS theme" title="Toggle NHS theme">
     <svg viewBox="0 0 40 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
   <path fill="#005eb8" d="M0 0h40v16H0z"/>

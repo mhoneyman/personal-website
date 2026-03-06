@@ -76,23 +76,6 @@ const nhsHeader = `
   </div>
 </header>`;
 
-// NHS Footer component (shown only when NHS theme is active)
-const nhsFooter = `
-<footer class="nhsuk-footer" role="contentinfo">
-  <div class="nhsuk-footer__container">
-    <div class="nhsuk-footer__meta">
-      <h2 class="nhsuk-u-visually-hidden">Support links</h2>
-      <ul class="nhsuk-footer__list">
-        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="#">Accessibility statement</a></li>
-        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="#">Contact</a></li>
-        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="#">Privacy policy</a></li>
-        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="#">Terms and conditions</a></li>
-      </ul>
-      <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
-    </div>
-  </div>
-</footer>`;
-
 // NHS toggle JavaScript
 const nhsToggleScript = `
 <script>
@@ -136,7 +119,6 @@ const html = `<!DOCTYPE html>
       </div>
     </main>
   </div>
-  ${nhsFooter}
   <button class="nhs-egg" aria-label="Toggle NHS theme" title="Toggle NHS theme">
     ${nhsLogoSvg}
   </button>

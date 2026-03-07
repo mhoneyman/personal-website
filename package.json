@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "build": "node scripts/build.js",
+    "fetch-substack": "node scripts/fetch-substack.js",
     "watch": "node scripts/build.js && fswatch -o src css | xargs -n1 -I{} node scripts/build.js"
   },
   "dependencies": {

@@ -9,4 +9,4 @@
 
 ## Substack
 
-Coming soon.
+No posts yet.
